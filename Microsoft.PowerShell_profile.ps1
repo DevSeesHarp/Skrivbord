@@ -1,4 +1,13 @@
 Try {
+    if ((winget list --id Microsoft.PowerShell.Preview | Select-String '\bVersion\s+Available\b' -Quiet)) {
+        WRITE-HOST "Upgrading PowerShell to latest version"
+        winget upgrade --id Microsoft.PowerShell.Preview
+    }
+}
+Catch {
+    WRITE-HOST "could not upgrade powershell!"
+}
+Try {
     Import-Module -Name Terminal-Icons -ErrorAction Stop
 }
 Catch {
