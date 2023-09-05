@@ -15,5 +15,5 @@ Catch {
     Install-Module -Name Terminal-Icons -Repository PSGallery
     Import-Module -Name Terminal-Icons
 }
-oh-my-posh --init --shell pwsh --config ~/jandedobbeleer.omp.json | Invoke-Expression
-$repos = Resolve-Path -Path "*/source/repos"
+oh-my-posh --init --shell pwsh --config ~\jandedobbeleer.omp.json | Invoke-Expression
+$repos = Resolve-Path -Path "*\source\repos"
