@@ -17,3 +17,4 @@ Catch {
 }
 oh-my-posh --init --shell pwsh --config ~\jandedobbeleer.omp.json | Invoke-Expression
 $repos = Resolve-Path -Path "*\source\repos"
+$local = Resolve-Path -Path "*\source\local"
