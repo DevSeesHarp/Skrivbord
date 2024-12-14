@@ -15,7 +15,6 @@ Catch {
     Install-Module -Name Terminal-Icons -Repository PSGallery
     Import-Module -Name Terminal-Icons
 }
-oh-my-posh --init --shell pwsh --config ~\jandedobbeleer.omp.json | Invoke-Expression
+oh-my-posh --init --shell pwsh --config "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)\theme.omp.json" | Invoke-Expression
 
 $repos = Resolve-Path -PATH "$($env:USERPROFILE)\source\repos"
-$local = Resolve-Path -PATH "$($env:USERPROFILE)\source\local"
