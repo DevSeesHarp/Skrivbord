@@ -8,4 +8,4 @@ Catch {
 }
 oh-my-posh --init --shell pwsh --config "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)\theme.omp.json" | Invoke-Expression
 
-$repos = Resolve-Path -PATH "$($env:USERPROFILE)\source\repos"
+$repos = Resolve-Path -PATH "$($env:USERPROFILE)\source\repos" -ErrorAction SilentlyContinue
